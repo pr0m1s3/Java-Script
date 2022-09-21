@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do - Done</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/font.css">
+    <link rel="stylesheet" type="text/css"  href="./assets/css/main.css">
+</head>
+<body onload="LoadElementList()">
+    <div class="align" align="center">
+        <div class="main">
+            <div class="storage">
+                <div class="login">
+                    <h2>Login</h2>
+                    <form method="GET" onsubmit="return UserStorage('login');">
+                        <input type="text" name="username" placeholder="username" class="inputs login_username"><br>
+                        <input type="password" name="password" placeholder="password" class="inputs login_password"><br>
+                        <input type="submit" name="submit">
+                    </form>
+                </div>
+                <div class="register">
+                    <h2>Register</h2>
+                    <form method="GET" onsubmit="return UserStorage('register');">
+                        <input type="text" name="username" placeholder="username" class="inputs register_username"><br>
+                        <input type="password" name="password" placeholder="password" class="inputs register_password"><br>
+                        <input type="submit" name="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="todo-done-add">
+                <h2 class="h2">ToDo 추가</h2>
+                <input type="text" name="add_input" class="add_input">
+                <button onclick="listadd()" class="add_bth">추가</button>
+            </div>
+            <div>
+                <h2 class="h2">To-Do</h2>
+                <div class="boxs">
+                    <div class="list todo">
+                    </div>
+                </div>
+                <hr class="bar">
+            </div>
+            <div>
+                <h2 class="h2">Done</h2>
+                <div class="boxs">
+                    <div class="list done">
+                    </div>
+                </div>
+                <hr class="bar">
+            </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/event.js"></script>
+    <script type="text/javascript" src="./assets/js/Storage.js"></script>
+</body>
+</html>
